@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Disease Predictor</h1>
+        <label for="symptoms">Select Symptoms:</label>
+        <div class="select-container">
+            <select id="symptoms" multiple>
+                {% for symptom in symptoms %}
+                <option value="{{ symptom }}">{{ symptom }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button onclick="getPrediction()">Predict Disease</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#symptoms").select2({
+                placeholder: "Select symptoms...",
+                allowClear: true,
+                width: "100%"
+            });
+        });
+    </script>
+</body>
+</html>

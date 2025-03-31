@@ -1,0 +1,136 @@
+body {
+    background: url('img.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* background: #f4f4f4; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10vh;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    backdrop-filter: blur(5px);
+}
+
+
+h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.select-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+select {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styling for better multi-select appearance */
+select[multiple] {
+    height: 200px;
+    overflow-y: auto;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    margin-top: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Animation Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#result {
+    animation: fadeIn 0.5s ease-in-out;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.disease {
+    color: red;
+    /* Red */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.score {
+    color: rgb(6, 44, 126);
+    /* Dark Blue */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.description {
+    color: #315c94;
+    /* Medium Blue */
+    font-size: 16px;
+    font-style: italic;
+}
+
+.precaution-title {
+    color: #167e59;
+    /* Teal */
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.precautions {
+    color: #1e3d49;
+    /* Dark Teal */
+    font-size: 14px;
+    list-style-type: none;
+    display: grid;
+    padding: 0;
+}
