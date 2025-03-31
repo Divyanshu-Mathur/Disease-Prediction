@@ -1,4 +1,5 @@
 numpy
+gunicorn
 pandas
 matplot
 seaborn
